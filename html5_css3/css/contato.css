@@ -1,0 +1,102 @@
+legend{
+    font-weight: bold;
+}
+
+label[for="Consultoria"],
+fieldset > fieldset{
+    display: inline;
+}
+
+label[for="mensagem"]{
+    display: block;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+textarea{
+    font-size: 1.2em;
+    padding: 0.15em 0.35em;
+}
+
+input[name="nome"], input[name="e-mail"]{
+    padding: 0.5em;
+    width: 100%;
+    display: block;
+    margin-bottom: 0.6em;
+}
+
+button{
+    border: 0;
+    padding: .5em 1em;
+    font-family: "Open Sans Condensed", sans-serif;
+    background-color: #3C1D3D;
+    color: white;
+    font-size: 1.2em;
+    /* Faz com que o botão apareça na direita */
+    margin-left: auto;
+    margin-top: 1em;
+    display: block;
+}
+
+button:hover,
+button:focus {
+    background-color: #8C1D3D;
+}
+
+input:invalid {
+    box-shadow: 0 0 3px red;
+}
+
+input[name="nome"]:valid,
+input[name="e-mail"]:valid{
+    box-shadow: 0 0 3px green;;
+}
+
+input:focus,
+textarea:focus {
+    background-color: #FFD;
+}
+
+input[value="other"] ~ input {
+    display: none;
+
+}
+
+input[value="other"]:checked ~ input {
+    display: inline;
+}
+
+label[for="nome"]{
+    position: relative;
+}
+
+.comImg {
+    position: relative;
+}
+
+.comImg::after{
+    content: '';
+    position: absolute;
+    background-size: 50% 50%;
+    background-position: center;
+    background-color:red;
+    background-repeat: no-repeat;
+    top: 104%;
+    left: 0;
+    height: 1.7em;
+    width: 2em;
+}
+
+label[for="email"]::after{
+    background-image: url(../imagens/email.png);
+}
+
+label[for="nome"]::after{
+    background-image: url(../imagens/usuario.png);
+}
+
+.comImg + input {
+    width: calc(100% - 2.9em);  
+    position: relative;
+    left: 2.9em;
+}

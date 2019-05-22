@@ -1,0 +1,11 @@
+ul li:nth-child(even){
+    color: purple;
+};
+
+button:hover{
+    background-color: aqua;
+}
+
+p a[href="#"]{
+    color: rebeccapurple;
+}

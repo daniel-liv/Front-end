@@ -1,0 +1,130 @@
+h1{
+    animation: aparece 1s ease-in;
+}
+
+@keyframes aparece{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.citacao-bio {
+    background-color: #D9E5E3;
+    border: .5em solid #C2CCCA;
+    padding: 1em;
+    margin: 1em 2em;
+    width: calc(30ch - 3em);
+    position: relative;
+    transition: transform 0.9s ease-out, box-shadow 0.9s;
+    transition-delay: 0s, 0.9s;
+    animation: quica 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes quica{
+    0%{
+        top: 0;
+    }
+    /*90%{
+        transform: rotate(-2deg);
+    }
+    95%{
+        transform: rotate(2deg);
+    }*/
+    100%{
+        top: 1em;
+    }
+}
+
+.citacao-bio:hover,
+.citacao-bio:focus{
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
+    animation-play-state: paused;
+    transition-delay: 0.9s, 0s;
+}
+
+.citacao-bio:nth-of-type(even) {
+    float: left;
+    margin-left: 0;
+}
+
+.citacao-bio:nth-of-type(odd) {
+    float: right;
+    margin-right: 0;
+}
+
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus{
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus{
+    transform: scale(1.2) rotate(5deg);
+}
+
+
+.container > p::first-letter{
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+    color:#3C1D3D;
+}
+
+
+/*    OU      p ~ p::first-letter,
+              div::first-letter{
+                 font-size: 2em;
+              }
+*/
+
+.citacao-bio > p{
+    position: relative;
+}
+
+.citacao-bio::before{
+    content: '“';
+    position: absolute;
+    font-size: 10em;
+    color: #bbb;
+    line-height: 0.8;
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 0.25em;
+    margin: 1em 0;
+}
+
+thead tr > th{
+    background-color: #3C1D3D;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+tbody tr > th {
+    background-color: #851944;
+    color: white;
+    padding: .8em;
+    font-weight: bold;
+}
+
+td{
+    background-color: #EEE;
+    color: inherit;
+    padding: 1em;
+}
+
+td[colspan]{
+    font-style: italic;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+};
